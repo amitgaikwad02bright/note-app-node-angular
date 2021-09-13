@@ -1,0 +1,73 @@
+.note-list {
+  gap: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 420px;
+  overflow-x: auto;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+@media only screen and (max-width: 500px) {
+  .note-list .note {
+    width: 70vw !important;
+  }
+  .note-list {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+}
+.note-list::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+.note-list::-webkit-scrollbar-thumb {
+  background: pink;
+  border-radius: 16px;
+  box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%),
+    inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+.note-list::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
+}
+.note-list .note {
+  background: rgb(247 223 108);
+  padding: 20px;
+  width: 160px;
+  min-height: 150px;
+  font-family: cursive;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.note-list .note button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.new-note-area {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+  color: blue;
+  width: 160px;
+  min-height: 150px;
+  font-family: cursive;
+}
+
+textarea {
+  background: transparent;
+  resize: none;
+  outline: none;
+  width: 90%;
+  padding: 10px;
+  min-height: 130px;
+  height: 100%;
+  border: none;
+  margin-top: 5px;
+}
